@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import joblib
 
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_model():
     model = joblib.load('obs.pkl')
     return model
